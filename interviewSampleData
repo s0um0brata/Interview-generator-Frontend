@@ -1,0 +1,255 @@
+const interviewData = {
+  matchScore: 91,
+
+  technicalQuestions: [
+    {
+      question:
+        "How do you handle asynchronous operations in Node.js, and what are the advantages of using Async/Await over Promises?",
+      intention:
+        "To evaluate the candidate's understanding of asynchronous programming and code readability in backend development.",
+      answer:
+        "Async/Await provides a cleaner and more readable syntax compared to chained Promises. It simplifies error handling using try/catch blocks and improves maintainability in large applications.",
+    },
+
+    {
+      question:
+        "Explain the process of implementing JWT authentication in an Express.js application.",
+      intention:
+        "To assess security knowledge and practical experience with session management in APIs.",
+      answer:
+        "JWT authentication works by signing a payload using a secret key. The client stores the token and sends it in the Authorization header for protected requests.",
+    },
+
+    {
+      question:
+        "How would you optimize a MongoDB query that is slow on large datasets?",
+      intention:
+        "To evaluate database optimization and indexing knowledge.",
+      answer:
+        "I would analyze the query using .explain(), create indexes on frequently queried fields, avoid unnecessary document fetching, and use pagination for large responses.",
+    },
+
+    {
+      question:
+        "What are React Hooks and why are they useful in modern React development?",
+      intention:
+        "To assess understanding of state management and component lifecycle.",
+      answer:
+        "Hooks allow developers to use state and lifecycle features inside functional components. They reduce boilerplate and improve code reusability.",
+    },
+
+    {
+      question:
+        "Explain the difference between SQL and NoSQL databases.",
+      intention:
+        "To test database architecture knowledge.",
+      answer:
+        "SQL databases are relational and schema-based, while NoSQL databases are flexible and document-oriented, making them suitable for scalable distributed applications.",
+    },
+
+    {
+      question:
+        "How do you improve frontend performance in React applications?",
+      intention:
+        "To assess frontend optimization skills.",
+      answer:
+        "I use lazy loading, memoization, code splitting, pagination, virtualization, and efficient state management to reduce unnecessary renders.",
+    },
+
+    {
+      question:
+        "Describe the role of middleware in Express.js.",
+      intention:
+        "To evaluate backend architecture understanding.",
+      answer:
+        "Middleware functions process requests before they reach the controller. They are commonly used for authentication, validation, logging, and error handling.",
+    },
+  ],
+
+  behavioralQuestions: [
+    {
+      question:
+        "Describe a time you had to optimize a feature under a tight deadline.",
+      intention:
+        "To evaluate time management and technical decision-making under pressure.",
+      answer:
+        "I optimized a blockchain explorer by implementing IndexedDB caching and dynamic pagination, which significantly improved performance.",
+    },
+
+    {
+      question:
+        "Tell me about a challenging bug you solved recently.",
+      intention:
+        "To assess debugging and persistence skills.",
+      answer:
+        "I debugged a rendering issue caused by stale React state updates during pagination and fixed it by restructuring the state management flow.",
+    },
+
+    {
+      question:
+        "How do you handle working under pressure during deadlines?",
+      intention:
+        "To evaluate adaptability and stress management.",
+      answer:
+        "I break tasks into smaller milestones, prioritize critical features first, and maintain clear communication with the team.",
+    },
+
+    {
+      question:
+        "Describe a situation where you had to learn a new technology quickly.",
+      intention:
+        "To assess learning ability and adaptability.",
+      answer:
+        "I learned the Google GenAI SDK in a short timeframe by reading official documentation and building small experimental features first.",
+    },
+
+    {
+      question:
+        "How do you approach collaboration in team projects?",
+      intention:
+        "To evaluate communication and teamwork skills.",
+      answer:
+        "I prefer regular communication, Git-based workflows, and keeping tasks modular to avoid conflicts and maintain project clarity.",
+    },
+
+    {
+      question:
+        "What motivates you as a software developer?",
+      intention:
+        "To understand passion and long-term goals.",
+      answer:
+        "I enjoy solving real-world problems, optimizing systems, and continuously learning modern technologies.",
+    },
+  ],
+
+  skillGaps: [
+    {
+      skill: "Cloud Infrastructure (AWS/Azure/GCP)",
+      severity: "medium",
+    },
+
+    {
+      skill: "Containerization (Docker/Kubernetes)",
+      severity: "low",
+    },
+
+    {
+      skill: "System Design for Large Scale Applications",
+      severity: "medium",
+    },
+
+    {
+      skill: "Unit Testing with Jest",
+      severity: "medium",
+    },
+
+    {
+      skill: "CI/CD Pipeline Integration",
+      severity: "low",
+    },
+
+    {
+      skill: "Microservices Architecture",
+      severity: "medium",
+    },
+
+    {
+      skill: "Advanced SQL Optimization",
+      severity: "low",
+    },
+  ],
+
+  preparationPlan: [
+    {
+      day: 1,
+      focus: "Backend Deep Dive & Security",
+
+      tasks: [
+        "Review Node.js Event Loop",
+        "Practice OAuth2 and JWT",
+        "Study Express middleware",
+        "Build authentication middleware",
+      ],
+    },
+
+    {
+      day: 2,
+      focus: "Database & API Performance",
+
+      tasks: [
+        "Practice MongoDB aggregation",
+        "Review REST API best practices",
+        "Study indexing strategies",
+        "Implement Redis caching",
+      ],
+    },
+
+    {
+      day: 3,
+      focus: "Frontend Optimization",
+
+      tasks: [
+        "Study React rendering lifecycle",
+        "Practice lazy loading and code splitting",
+        "Implement React.memo and useMemo",
+        "Optimize large list rendering",
+      ],
+    },
+
+    {
+      day: 4,
+      focus: "System Design",
+
+      tasks: [
+        "Learn load balancing basics",
+        "Study caching architectures",
+        "Design a scalable chat system",
+        "Review microservices concepts",
+      ],
+    },
+
+    {
+      day: 5,
+      focus: "DevOps & Deployment",
+
+      tasks: [
+        "Learn Docker fundamentals",
+        "Deploy a MERN application",
+        "Study CI/CD workflows",
+        "Explore GitHub Actions",
+      ],
+    },
+
+    {
+      day: 6,
+      focus: "Testing & Debugging",
+
+      tasks: [
+        "Write Jest unit tests",
+        "Practice API testing",
+        "Debug asynchronous issues",
+        "Study logging strategies",
+      ],
+    },
+
+    {
+      day: 7,
+      focus: "Mock Interview & Revision",
+
+      tasks: [
+        "Conduct a mock technical interview",
+        "Review previous mistakes",
+        "Revise important React concepts",
+        "Practice behavioral questions",
+      ],
+    },
+  ],
+};
+
+
+
+{
+  "jobDescription"= "We are looking for a highly motivated Full Stack Software Engineer with strong experience in modern web application development. The ideal candidate should have hands-on experience with JavaScript, React.js, Node.js, Express.js, and MongoDB. Responsibilities include designing scalable REST APIs, implementing secure authentication systems using JWT and OAuth, optimizing frontend performance, and collaborating with cross-functional teams to deliver high-quality software solutions. Candidates should be familiar with database optimization, Git workflows, cloud deployment platforms, Docker fundamentals, and modern software engineering best practices. Experience with TypeScript, Redis, CI/CD pipelines, testing frameworks such as Jest, and scalable system architecture will be considered a strong advantage. The role also requires strong problem-solving abilities, debugging skills, communication skills, and the ability to work in agile development environments with tight deadlines.",
+  
+  "selfDescription" = "I am a passionate and detail-oriented software developer with strong experience in full stack web development using the MERN stack. I have worked extensively with React.js for building responsive and optimized frontend applications, and Node.js with Express.js for creating scalable backend APIs. I am comfortable working with MongoDB databases, implementing authentication and authorization systems, handling asynchronous operations, and optimizing application performance. I enjoy solving complex technical problems, learning modern technologies, and building real-world projects that improve user experience and system efficiency. I have experience working with REST APIs, Git version control, responsive UI development, pagination systems, caching strategies, and modern JavaScript features. I am highly adaptable, quick to learn new technologies, and capable of collaborating effectively within development teams while maintaining clean and maintainable code practices."
+}
