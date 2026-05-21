@@ -42,20 +42,33 @@ export const useAuth = () => {
     }
   };
 
-  useEffect(() => {
-    const getAndSetUser = async () => {
-      try {
-        const data = await getMe();
-        setUser(data.user);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
+  // useEffect(() => {
+  //   const getAndSetUser = async () => {
+  //     try {
+  //       const data = await getMe();
+  //       setUser(data.user);
+  //     } catch (error) {
+  //       console.log(error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   getAndSetUser();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
+
+  const getAndSetUser = async () => {
+    try {
+      const response = await getMe();
+
+      if (response?.user) {
+        setUser(response.user);
       }
-    };
-    getAndSetUser();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    } catch (error) {
+      console.log(error);
+      setUser(null);
+    }
+  };
 
   return { user, loading, handleRegsiter, handleLogin, handleLogout };
 };
