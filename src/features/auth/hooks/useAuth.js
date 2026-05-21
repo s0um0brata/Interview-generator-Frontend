@@ -42,37 +42,37 @@ export const useAuth = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const getAndSetUser = async () => {
-  //     try {
-  //       const data = await getMe();
-  //       setUser(data.user);
-  //     } catch (error) {
-  //       console.log(error);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   getAndSetUser();
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
+  useEffect(() => {
+    const getAndSetUser = async () => {
+      try {
+        const data = await getMe();
+        setUser(data.user);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    getAndSetUser();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const getAndSetUser = async () => {
-  try {
-    const response = await getMe();
+//   const getAndSetUser = async () => {
+//   try {
+//     const response = await getMe();
 
-    if (response?.user) {
-      setUser(response.user);
-    } else {
-      setUser(null);
-    }
-  } catch (error) {
-    console.log(error);
-    setUser(null);
-  } finally {
-    setLoading(false);
-  }
-};
+//     if (response?.user) {
+//       setUser(response.user);
+//     } else {
+//       setUser(null);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//     setUser(null);
+//   } finally {
+//     setLoading(false);
+//   }
+// };
 
   return { user, loading, handleRegsiter, handleLogin, handleLogout };
 };
