@@ -19,16 +19,25 @@ export const useAuth = () => {
   };
 
   const handleRegsiter = async ({ username, email, password }) => {
-    setLoading(true);
-    try {
-      const data = await register({ username, email, password });
-      setUser(data.user);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  };
+  setLoading(true);
+
+  try {
+    const data = await register({
+      username,
+      email,
+      password,
+    });
+
+    setUser(data.user);
+
+    return data;
+  } catch (error) {
+    console.log(error);
+    throw error;
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleLogout = async () => {
     setLoading(true);
@@ -56,23 +65,6 @@ export const useAuth = () => {
     getAndSetUser();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-//   const getAndSetUser = async () => {
-//   try {
-//     const response = await getMe();
-
-//     if (response?.user) {
-//       setUser(response.user);
-//     } else {
-//       setUser(null);
-//     }
-//   } catch (error) {
-//     console.log(error);
-//     setUser(null);
-//   } finally {
-//     setLoading(false);
-//   }
-// };
 
   return { user, loading, handleRegsiter, handleLogin, handleLogout };
 };

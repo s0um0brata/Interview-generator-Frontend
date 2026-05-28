@@ -13,8 +13,9 @@ const Register = () => {
   const { loading, handleRegsiter } = useAuth();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
+  try {
     await handleRegsiter({
       username,
       email,
@@ -22,7 +23,10 @@ const Register = () => {
     });
 
     navigate("/");
-  };
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   if (loading) {
     return (
